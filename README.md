@@ -20,7 +20,7 @@
 
 <picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="./assets/profile/explore-move.png">
-  <img align="right" src="./assets/profile/explore-move.gif" alt="A small figure switches between experimenting at a computer and running." width="220">
+  <img align="right" src="./assets/profile/explore-move.gif" alt="A small figure switches between experimenting at a computer and lifting a barbell." width="220">
 </picture>
 
 I’m **Logesh**, a curiosity-driven teenager and a B.Tech Computer Science student. When I find something interesting, I want to go deep and understand it. I’m always ready to challenge myself and my limits.
