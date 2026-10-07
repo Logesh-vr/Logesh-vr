@@ -1,171 +1,344 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
+import { useEffect, useRef, useState } from "react";
+import {
+  ArrowDown,
+  ArrowUpRight,
+  Check,
+  Copy,
+  Github,
+  Menu,
+  X,
+} from "lucide-react";
+import { categories, projects, type Category } from "./data/projects";
+import ProjectVisual from "./components/ProjectVisual";
 
-import { useEffect } from 'react';
-import Lenis from 'lenis';
-import { motion, useScroll, useTransform } from 'motion/react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import HorizontalGallery from './components/HorizontalGallery';
-import CustomCursor from './components/CustomCursor';
-import { useGitHub } from './hooks/useGitHub';
-import { ArrowRight, Mail, Code, Palette, Zap } from 'lucide-react';
-
+const email = "logeshrv2006@gmail.com";
+const github = "https://github.com/Logesh-vr";
+const linkedin = "https://www.linkedin.com/in/logesh-rajaraman-665798323/";
 export default function App() {
-  const { repos, profile, loading } = useGitHub('Logesh-vr');
-
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [category, setCategory] = useState<Category>("All projects");
+  const [copyStatus, setCopyStatus] = useState("");
+  const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  const menuButton = useRef<HTMLButtonElement>(null);
+  useEffect(() => () => clearTimeout(timer.current), []);
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    });
-
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-
-    return () => {
-      lenis.destroy();
+    if (!menuOpen) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setMenuOpen(false);
+        menuButton.current?.focus();
+      }
     };
-  }, []);
-
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [menuOpen]);
+  async function copyEmail() {
+    try {
+      await navigator.clipboard.writeText(email);
+      setCopyStatus("Email copied");
+    } catch {
+      setCopyStatus("Copy unavailable. Use the email link.");
+    }
+    clearTimeout(timer.current);
+    timer.current = setTimeout(() => setCopyStatus(""), 4000);
+  }
+  const visibleProjects = projects.filter(
+    (project) => category === "All projects" || project.category === category,
+  );
   return (
-    <main className="bg-bg text-ink">
-      <CustomCursor />
-      <Navbar />
-      
-      <Hero />
-
-      {/* About Section */}
-      <section id="about" className="py-32 px-6 md:px-24 max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-24 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+    <>
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
+      <header className="site-header">
+        <div className="shell header-inner">
+          <a className="wordmark" href="#home" aria-label="Logesh, home">
+            logesh<span> / </span>vr<span className="brand-dot">.</span>
+          </a>
+          <button
+            ref={menuButton}
+            className="menu-toggle"
+            aria-expanded={menuOpen}
+            aria-controls="navigation"
+            aria-label={menuOpen ? "Close navigation" : "Open navigation"}
+            onClick={() => setMenuOpen(!menuOpen)}
           >
-            <h2 className="text-5xl md:text-7xl font-serif mb-12 leading-tight">
-              Crafting <span className="italic text-accent">digital</span> experiences that matter.
-            </h2>
-            <div className="space-y-6 text-lg text-white/60 font-sans leading-relaxed">
+            {menuOpen ? <X /> : <Menu />}
+          </button>
+          <nav
+            id="navigation"
+            className={menuOpen ? "navigation is-open" : "navigation"}
+            aria-label="Main navigation"
+          >
+            {[
+              ["Work", "#work"],
+              ["About", "#about"],
+              ["Contact", "#contact"],
+            ].map(([label, href]) => (
+              <a key={href} href={href} onClick={() => setMenuOpen(false)}>
+                {label}
+              </a>
+            ))}
+            <a
+              className="nav-github"
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub <ArrowUpRight size={16} />
+            </a>
+          </nav>
+        </div>
+      </header>
+      <main id="main">
+        <section id="home" className="hero shell" aria-labelledby="hero-title">
+          <div className="hero-top">
+            <span className="eyebrow">
+              <span className="signal" /> COMPUTER SCIENCE · FULL STACK · AI
+            </span>
+            <span className="edition">A WORK IN PROGRESS. ALWAYS.</span>
+          </div>
+          <div className="hero-layout">
+            <div className="hero-copy">
+              <h1 id="hero-title">
+                Curiosity.
+                <br />
+                Code.
+                <br />
+                <span>Something useful.</span>
+              </h1>
               <p>
-                {profile?.bio || "I am a creative developer focused on building immersive web experiences. I blend technical proficiency with design intuition to create products that are both functional and beautiful."}
+                I’m Logesh, a computer science student turning ideas into
+                software—across web development, AI, and the things that catch
+                my curiosity.
               </p>
-              <p>
-                Specializing in React, Three.js, and modern animation libraries, I push the boundaries of what's possible in the browser.
-              </p>
-            </div>
-
-            <div className="mt-12 flex flex-wrap gap-8">
-              <div className="flex items-center gap-3">
-                <Mail className="text-accent" size={20} />
-                <span className="text-sm font-mono uppercase tracking-widest">logeshrv2006@gmail.com</span>
+              <div className="hero-actions">
+                <a className="button primary" href="#work">
+                  Explore my work <ArrowDown size={18} />
+                </a>
+                <a className="text-link" href={`mailto:${email}`}>
+                  Say hello <ArrowUpRight size={18} />
+                </a>
               </div>
             </div>
-          </motion.div>
-
-          <div className="grid grid-cols-2 gap-4">
-            {[
-              { icon: <Code />, title: "Development", desc: "Clean, scalable code using modern frameworks." },
-              { icon: <Palette />, title: "Design", desc: "User-centric interfaces with a focus on aesthetics." },
-              { icon: <Zap />, title: "Performance", desc: "Optimized for speed and smooth interactions." },
-              { icon: <ArrowRight />, title: "Strategy", desc: "Aligning technical solutions with business goals." }
-            ].map((skill, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:border-accent/50 transition-colors group"
-              >
-                <div className="text-accent mb-4 group-hover:scale-110 transition-transform inline-block">
-                  {skill.icon}
-                </div>
-                <h4 className="text-xl font-serif mb-2">{skill.title}</h4>
-                <p className="text-xs text-white/40 font-sans leading-relaxed">{skill.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Section */}
-      <div id="works">
-        {loading ? (
-          <div className="h-screen flex items-center justify-center bg-bg">
-            <div className="flex flex-col items-center gap-4">
-              <div className="w-12 h-12 border-2 border-accent border-t-transparent rounded-full animate-spin" />
-              <span className="text-xs font-mono uppercase tracking-widest text-white/40">Loading Projects...</span>
+            <div className="hero-art" aria-hidden="true">
+              <div className="art-grid" />
+              <div className="orbit orbit-one" />
+              <div className="orbit orbit-two" />
+              <div className="orbit orbit-three" />
+              <div className="art-core">
+                L<span>↗</span>
+              </div>
+              <span className="art-coordinate coordinate-top">
+                IDEA → ITERATION
+              </span>
+              <span className="art-coordinate coordinate-bottom">
+                BUILD / LEARN / REPEAT
+              </span>
+              <span className="art-plus">+</span>
             </div>
           </div>
-        ) : (
-          <HorizontalGallery projects={repos} />
-        )}
-      </div>
-
-      {/* Footer / Contact */}
-      <footer id="contact" className="relative py-32 px-6 overflow-hidden bg-white text-bg">
-        <div className="max-w-7xl mx-auto text-center relative z-10">
-          <motion.span
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            className="text-xs uppercase tracking-[0.5em] font-mono text-bg/40 mb-8 block"
-          >
-            Have a project in mind?
-          </motion.span>
-          
-          <h2 className="text-[12vw] font-serif italic leading-none tracking-tighter mb-12">
-            Let's <span className="text-accent not-italic">Talk</span>
-          </h2>
-
-          <div className="flex flex-col md:flex-row items-center justify-center gap-12 mt-24">
-            <a
-              href="mailto:logeshrv2006@gmail.com"
-              className="text-3xl md:text-5xl font-serif hover:text-accent transition-colors underline underline-offset-8"
-            >
-              logeshrv2006@gmail.com
+          <div className="hero-bottom">
+            <span>Be better than yesterday.</span>
+            <a href="#work">
+              SELECTED WORK <ArrowDown size={14} />
             </a>
-            
-            <div className="flex gap-8">
-              {[
-                { name: 'GitHub', url: 'https://github.com/Logesh-vr' },
-                { name: 'LinkedIn', url: 'https://www.linkedin.com/in/logesh-rajaraman-665798323/' }
-              ].map((social) => (
-                <a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-sm uppercase tracking-widest font-mono hover:text-accent transition-colors"
+          </div>
+        </section>
+        <section
+          id="work"
+          className="work-section"
+          aria-labelledby="work-title"
+        >
+          <div className="shell">
+            <div className="section-heading">
+              <div>
+                <span className="eyebrow">01 / SELECTED WORK</span>
+                <h2 id="work-title">
+                  Ideas, made tangible<span>.</span>
+                </h2>
+              </div>
+              <p>
+                Useful problems. Different perspectives.
+                <br />A few things I’ve been building.
+              </p>
+            </div>
+            <div
+              className="project-filters"
+              role="group"
+              aria-label="Filter projects"
+            >
+              {categories.map((value) => (
+                <button
+                  key={value}
+                  aria-pressed={category === value}
+                  onClick={() => setCategory(value)}
                 >
-                  {social.name}
-                </a>
+                  {value}
+                  {value === "All projects" && <span>03</span>}
+                </button>
+              ))}
+            </div>
+            <p className="sr-only" role="status">
+              {visibleProjects.length} projects shown
+            </p>
+            <div className="project-grid">
+              {visibleProjects.map((project) => (
+                <article className="project-card" key={project.slug}>
+                  <ProjectVisual variant={project.visual} />
+                  <div className="project-body">
+                    <div className="project-meta">
+                      <span>{project.kind}</span>
+                      <span>0{projects.indexOf(project) + 1}</span>
+                    </div>
+                    <h3>
+                      {project.name}
+                      <span>{project.headline}</span>
+                    </h3>
+                    <p>{project.description}</p>
+                    <ul
+                      className="stack"
+                      aria-label={`${project.name} technologies`}
+                    >
+                      {project.stack.map((tech) => (
+                        <li key={tech}>{tech}</li>
+                      ))}
+                    </ul>
+                    <details>
+                      <summary>Project notes</summary>
+                      <p>{project.detail}</p>
+                    </details>
+                    <a
+                      className="project-link"
+                      href={`${github}/${project.slug}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Explore {project.name} <ArrowUpRight size={18} />
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <div className="work-footer">
+              <span>Domain illustrations above, not product screenshots.</span>
+              <a
+                className="text-link"
+                href={`${github}?tab=repositories`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                More on GitHub <ArrowUpRight size={17} />
+              </a>
+            </div>
+          </div>
+        </section>
+        <section
+          id="about"
+          className="about-section shell"
+          aria-labelledby="about-title"
+        >
+          <div className="about-intro">
+            <span className="eyebrow">02 / THE PERSON BEHIND THE CODE</span>
+            <h2 id="about-title">
+              A student.
+              <br />A builder.
+              <br />
+              <em>Always curious.</em>
+            </h2>
+            <div className="personal-note">
+              <span>OFF THE KEYBOARD</span>
+              <p>
+                Training in the gym. Exploring hardware. Finding the next thing
+                to learn.
+              </p>
+            </div>
+          </div>
+          <div className="about-content">
+            <p className="about-lead">
+              I like understanding how things work—and then seeing what I can
+              make with them.
+            </p>
+            <p>
+              I’m pursuing a B.Tech in Computer Science. My projects span
+              full-stack applications, computer vision, and practical tools for
+              everyday problems. I learn by building, testing ideas, and
+              improving what comes next.
+            </p>
+            <p>
+              The same mindset follows me outside software: stay consistent,
+              stay curious, and be better than yesterday.
+            </p>
+            <div className="skills">
+              {[
+                [
+                  "Web & applications",
+                  "React · TypeScript · Node.js · Flutter",
+                ],
+                ["APIs & data", "Python · FastAPI · PostgreSQL · SQL"],
+                ["AI & exploration", "OpenCV · MediaPipe · NumPy · Pandas"],
+              ].map(([title, skills], i) => (
+                <div key={title}>
+                  <span>0{i + 1}</span>
+                  <h3>{title}</h3>
+                  <p>{skills}</p>
+                </div>
               ))}
             </div>
           </div>
-
-          <div className="mt-32 pt-12 border-t border-bg/10 flex flex-col md:flex-row justify-between items-center gap-6">
-            <span className="text-xs font-mono uppercase tracking-widest text-bg/40">
-              © 2024 Logesh VR. All Rights Reserved.
-            </span>
-            <span className="text-xs font-mono uppercase tracking-widest text-bg/40">
-              Designed & Developed with Passion
-            </span>
+        </section>
+        <section
+          id="contact"
+          className="contact-section"
+          aria-labelledby="contact-title"
+        >
+          <div className="shell">
+            <span className="eyebrow">03 / START A CONVERSATION</span>
+            <div className="contact-layout">
+              <h2 id="contact-title">
+                Good things start
+                <br />
+                with <em>a hello.</em>
+              </h2>
+              <div>
+                <p>
+                  A project, a collaboration, or an interesting idea?
+                  <br />
+                  I’d love to hear about it.
+                </p>
+                <a className="email-link" href={`mailto:${email}`}>
+                  {email}
+                  <ArrowUpRight size={25} />
+                </a>
+                <div className="copy-row">
+                  <button className="copy-button" onClick={copyEmail}>
+                    {copyStatus === "Email copied" ? (
+                      <Check size={15} />
+                    ) : (
+                      <Copy size={15} />
+                    )}{" "}
+                    Copy email
+                  </button>
+                  <span role="status">{copyStatus}</span>
+                </div>
+              </div>
+            </div>
+            <div className="contact-social">
+              <a href={github} target="_blank" rel="noopener noreferrer">
+                <Github size={18} /> GitHub <ArrowUpRight size={15} />
+              </a>
+              <a href={linkedin} target="_blank" rel="noopener noreferrer">
+                LinkedIn <ArrowUpRight size={15} />
+              </a>
+              <a href="#home">Back to top ↑</a>
+            </div>
           </div>
-        </div>
-
-        {/* Decorative background text */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap opacity-[0.02] pointer-events-none select-none">
-          <span className="text-[40vw] font-serif italic">CONTACT</span>
-        </div>
+        </section>
+      </main>
+      <footer className="site-footer shell">
+        <span>© {new Date().getFullYear()} Logesh Rajaraman</span>
+        <span>Built with curiosity. Improved with practice.</span>
       </footer>
-    </main>
+    </>
   );
 }

@@ -1,117 +1,34 @@
-<div align="center">
-  <img src="banner.svg" width="100%" alt="Logesh Banner"/>
-</div>
+![Logesh Rajaraman — Curiosity. Code. Something useful.](./banner.svg)
 
-<div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&weight=700&size=22&duration=2800&pause=1200&color=FFFFFF&center=true&vCenter=true&multiline=false&repeat=true&width=600&height=50&lines=B.Tech+CS+%7C+AI+%7C+Full+Stack;Building+Body+%26+Codebase;Be+Better+Than+Yesterday" alt="Typing SVG"/>
-</div>
+### Hi, I’m Logesh.
 
----
+I’m a **B.Tech Computer Science student** exploring full-stack development, AI, and hardware. I like turning interesting problems into working software—and learning something new along the way.
 
-<div align="center">
+[GitHub](https://github.com/Logesh-vr) · [LinkedIn](https://www.linkedin.com/in/logesh-rajaraman-665798323/) · [Email](mailto:logeshrv2006@gmail.com)
 
-## Know About Me
+### Selected work
 
-</div>
+| Project                                                     | What I’m building                                                                                                 | Technologies                 |
+| :---------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------- | :--------------------------- |
+| **[hoWrk](https://github.com/Logesh-vr/hoWrk)**             | A hackathon-built civic incident platform with live maps and dashboards for citizens, guardians, and authorities. | React · TypeScript · FastAPI |
+| **[UB](https://github.com/Logesh-vr/UB)**                   | A gym tracker for personal records, weekly routines, training history, and lift-based leaderboards.               | React · FastAPI · PostgreSQL |
+| **[SignSenseAI](https://github.com/Logesh-vr/SignSenseAI)** | A webcam-based hand-gesture experiment using landmarks and finger-state logic to recognize common gestures.       | React · MediaPipe · OpenCV   |
 
-<table>
-  <tr>
-    <td width="200px" align="center">
-      <img src="https://media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif" width="180px" alt="coding gif"/>
-    </td>
-    <td>
+[Explore more repositories →](https://github.com/Logesh-vr?tab=repositories)
 
-**Hey there. I'm Logesh.**
+### Tools I work with
 
-B.Tech Computer Science student.
+- **Applications:** React, TypeScript, JavaScript, Node.js, Flutter
+- **APIs & data:** Python, FastAPI, SQL, PostgreSQL
+- **AI & exploration:** OpenCV, MediaPipe, NumPy, Pandas
+- **Foundations:** C, C++, Git
 
-I like exploring both technically and personally. Whether it's AI, software development, hardware projects, fitness, or something completely new - I'm in.
+### Beyond the keyboard
 
-By day, I code that sometimes works on the first try. By night, I debug the same line for 3 hours.
+Fitness is a big part of my life. Whether I’m training, debugging, or exploring a new idea, I value curiosity and consistency.
 
-Gym-focused too - because building the body builds everything else.
-
-> **Motto:** Be better than yesterday.
-
-  </td>
-  </tr>
-</table>
+**Be better than yesterday.**
 
 ---
 
-## Top Projects
-
-| Project | Description |
-|---------|-------------|
-| **[hoWrk](https://github.com/Logesh-vr/hoWrk)** | Hackathon-built civic incident platform. Citizens, guardians and authorities on one live map — React + FastAPI. |
-| **[UB](https://github.com/Logesh-vr/UB)** | Futuristic gym tracker with global leaderboard, PR tracking, dynamic routines and deload mode. Built to compete. |
-| **[MealOps](https://github.com/vedanthk-engr/MealOps)** | Large-scale hostel mess management — QR attendance, nutrition tracking, admin dashboard, Flutter + Next.js + FastAPI. |
-| **[inHand](https://github.com/Logesh-vr/inHand)** | Work in progress. Details coming soon. |
-
----
-
-<div align="center">
-
-## Connect
-
-[![GitHub](https://img.shields.io/badge/GITHUB-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Logesh-vr)
-[![LinkedIn](https://img.shields.io/badge/LINKEDIN-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/logesh-rajaraman-665798323/)
-[![Gmail](https://img.shields.io/badge/GMAIL-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:logeshrv2006@gmail.com)
-
-</div>
-
----
-
-> *Code is never finished. It only becomes slightly less terrible over time.*
-
-> *Every commit I make is essentially just a small, desperate apology to my future self. Someday I will return to this codebase, look at what I've written, and wonder who let me anywhere near a keyboard.*
-
----
-
-## Tech Stack
-
-![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
-![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
-![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
-![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
-![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
-![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
-![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
-![Blender](https://img.shields.io/badge/blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white)
-![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white)
-
----
-
-<div align="center">
-
-## Contribution
-
-![Logesh's Contribution Graph](https://github-readme-activity-graph.vercel.app/graph?username=Logesh-vr&theme=github-compact&bg_color=0d1117&color=ffffff&line=58a6ff&point=ffffff&area=true&hide_border=true)
-
-</div>
-
----
-
-<div align="center">
-
-## GitHub Stats
-
-<img src="https://github-readme-stats.vercel.app/api?username=Logesh-vr&theme=github_dark&hide_border=true&include_all_commits=true&count_private=false" />
-<br/>
-<img src="https://streak-stats.demolab.com/?user=Logesh-vr&theme=github-dark-blue&hide_border=true" />
-<br/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Logesh-vr&theme=github_dark&hide_border=true&include_all_commits=true&count_private=false&layout=compact" />
-
-</div>
+Have an interesting problem or want to build something together? **[Say hello.](mailto:logeshrv2006@gmail.com)**
