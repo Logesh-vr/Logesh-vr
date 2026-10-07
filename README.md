@@ -1,34 +1,60 @@
-![Logesh Rajaraman — Curiosity. Code. Something useful.](./banner.svg)
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="./assets/profile/curiosity.png">
+  <img src="./assets/profile/curiosity.gif" alt="Logesh — Curiosity, made executable. Neural signals and an orbit in motion." width="1000">
+</picture>
 
-### Hi, I’m Logesh.
+<h1 align="center">Hey, I’m Logesh.</h1>
+<p align="center"><strong>Computer science student · Full-stack builder · AI & simulation explorer</strong></p>
+<p align="center"><samp>I like finding out how things work.<br>Then making them do something interesting.</samp></p>
 
-I’m a **B.Tech Computer Science student** exploring full-stack development, AI, and hardware. I like turning interesting problems into working software—and learning something new along the way.
-
-[GitHub](https://github.com/Logesh-vr) · [LinkedIn](https://www.linkedin.com/in/logesh-rajaraman-665798323/) · [Email](mailto:logeshrv2006@gmail.com)
-
-### Selected work
-
-| Project                                                      | How it works                                                                                                                                                                                            | Technologies                                      |
-| :----------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------------------------------------------------ |
-| **[Virtual Fly Lab](https://github.com/Logesh-vr/fuitfly2)** | Couples a published fruit-fly spiking brain model to body physics through sensory encoding and motor decoding; adds a second independent brain and world with inspectable activity and experiment logs. | Python · Brian2 · MuJoCo                          |
-| **[VaanThuli](https://github.com/Logesh-vr/VaanThuli)**      | Turns satellite orbital elements into positions with SGP4, renders them on a 3D Earth, and filters ground tracks around a location-based sky bubble.                                                    | Three.js · SGP4 · Fastify                         |
-| **[EvoTheDino](https://github.com/Logesh-vr/EvoTheDino)**    | Evolves neural-network brains for the Chromium Dino runner: sense obstacles, evaluate runs, preserve champions, and breed the next generation through crossover and mutation.                           | JavaScript · Neural networks · Genetic algorithms |
-
-[Explore more repositories →](https://github.com/Logesh-vr?tab=repositories)
-
-### Tools I work with
-
-- **Applications:** React, TypeScript, JavaScript, Node.js, Flutter
-- **APIs & data:** Python, FastAPI, SQL, PostgreSQL
-- **AI & exploration:** OpenCV, MediaPipe, NumPy, Pandas
-- **Foundations:** C, C++, Git
-
-### Beyond the keyboard
-
-Fitness is a big part of my life. Whether I’m training, debugging, or exploring a new idea, I value curiosity and consistency.
-
-**Be better than yesterday.**
+<p align="center">
+  <a href="https://github.com/Logesh-vr">GitHub</a> &nbsp; / &nbsp;
+  <a href="https://www.linkedin.com/in/logesh-rajaraman-665798323/">LinkedIn</a> &nbsp; / &nbsp;
+  <a href="mailto:logeshrv2006@gmail.com">Say hello</a>
+</p>
 
 ---
 
-Have an interesting problem or want to build something together? **[Say hello.](mailto:logeshrv2006@gmail.com)**
+### A little about me
+
+I’m **Logesh Rajaraman**, a B.Tech Computer Science student who likes building across disciplines—from web applications and data pipelines to neural networks and simulated worlds.
+
+The projects that pull me in usually have a question at their centre: **Can neural spikes drive a body? What does an orbit look like from here? Can a dinosaur evolve its own decisions?** I enjoy turning those questions into software I can inspect, experiment with, and improve.
+
+My focus is on understanding the mechanism, connecting the pieces, and making the result approachable. Away from the keyboard, I’m into fitness. The same rule applies to both: **be better than yesterday.**
+
+### Three worlds I’ve been building
+
+**01 / [Virtual Fly Lab](https://github.com/Logesh-vr/fuitfly2)** &nbsp; — &nbsp; _Neural signals → movement_
+
+A published fruit-fly spiking brain model meets a simulated walking body. Sensory encoding and motor decoding close the loop; a second independent brain and physics world take the experiment one level deeper. Built as an inspectable research prototype with browser controls and activity logs.
+
+<sub>Python · Brian2 · MuJoCo · FlyGym</sub>
+
+**02 / [VaanThuli](https://github.com/Logesh-vr/VaanThuli)** &nbsp; — &nbsp; _Orbital elements → a sky to explore_
+
+Satellite positions calculated with SGP4, rendered on a 3D Earth, and filtered around an observer’s location. A meeting point for real data, applied mathematics, and visual engineering.
+
+<sub>Three.js · SGP4 · Fastify</sub>
+
+**03 / [EvoTheDino](https://github.com/Logesh-vr/EvoTheDino)** &nbsp; — &nbsp; _Failed runs → better candidate brains_
+
+A JavaScript neural network senses obstacles and chooses actions in the Dino runner. Selection, crossover, and mutation breed the next generation—an experiment in AI fundamentals you can watch unfold.
+
+<sub>JavaScript · Neural networks · Genetic algorithms</sub>
+
+[More experiments on GitHub ↗](https://github.com/Logesh-vr?tab=repositories)
+
+### My toolkit
+
+| Building interfaces             | Connecting systems         | Exploring intelligence               |
+| :------------------------------ | :------------------------- | :----------------------------------- |
+| React · TypeScript · JavaScript | Python · FastAPI · Node.js | Neural networks · OpenCV · MediaPipe |
+| Flutter · Three.js              | SQL · PostgreSQL · Git     | NumPy · Pandas · Simulation          |
+
+<sub>Tools from my projects—not a checklist of everything I’ve mastered.</sub>
+
+---
+
+<p align="center"><samp>Interesting question? Let’s build something around it.</samp><br><br>
+<a href="mailto:logeshrv2006@gmail.com">logeshrv2006@gmail.com</a></p>
