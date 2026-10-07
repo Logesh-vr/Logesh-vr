@@ -67,6 +67,10 @@ test("navigation, contacts, and narrow layouts work", async ({
   await expect(
     page.getByRole("link", { name: "logeshrv2006@gmail.com" }),
   ).toHaveAttribute("href", "mailto:logeshrv2006@gmail.com");
+  await expect(page.getByRole("link", { name: "LeetCode" })).toHaveAttribute(
+    "href",
+    "https://leetcode.com/u/Logesh4545/",
+  );
   for (const width of [320, 375, 600, 768, 1024, 1440]) {
     await page.setViewportSize({ width, height: 900 });
     expect(

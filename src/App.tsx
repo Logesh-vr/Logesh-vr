@@ -13,6 +13,7 @@ import ProjectVisual from "./components/ProjectVisual";
 
 const email = "logeshrv2006@gmail.com";
 const github = "https://github.com/Logesh-vr";
+const leetcode = "https://leetcode.com/u/Logesh4545/";
 const linkedin = "https://www.linkedin.com/in/logesh-rajaraman-665798323/";
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -334,6 +335,9 @@ export default function App() {
               </a>
               <a href={linkedin} target="_blank" rel="noopener noreferrer">
                 LinkedIn <ArrowUpRight size={15} />
+              </a>
+              <a href={leetcode} target="_blank" rel="noopener noreferrer">
+                LeetCode <ArrowUpRight size={15} />
               </a>
               <a href="#home">Back to top ↑</a>
             </div>
