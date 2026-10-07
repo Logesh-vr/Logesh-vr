@@ -1,7 +1,7 @@
 export default function ProjectVisual({
   variant,
 }: {
-  variant: "orbital" | "evolution" | "parcel";
+  variant: "orbital" | "evolution" | "connectome";
 }) {
   return (
     <div className={`project-visual ${variant}`} aria-hidden="true">
@@ -80,45 +80,66 @@ export default function ProjectVisual({
           </>
         ) : (
           <>
-            <path
-              d="M148 80 213 48 278 80 213 115Z"
-              fill="#c5bbdc"
+            <g stroke="#766395" opacity=".35">
+              <path d="M48 68 88 45 122 75 92 111 51 100 48 68 122 75 145 116 92 111 76 155 42 138 51 100M88 45 146 55 168 88 145 116 168 151 126 171 76 155 92 111M126 171 145 116M122 75 168 88" />
+              <path d="M183 127H224" strokeDasharray="4 5" />
+            </g>
+            <g fill="#766395">
+              {[
+                [48, 68],
+                [88, 45],
+                [122, 75],
+                [92, 111],
+                [51, 100],
+                [145, 116],
+                [76, 155],
+                [42, 138],
+                [146, 55],
+                [168, 88],
+                [168, 151],
+                [126, 171],
+              ].map(([x, y], i) => (
+                <circle key={i} cx={x} cy={y} r={i === 3 ? 6 : 4} />
+              ))}
+            </g>
+            <g stroke="#766395" strokeWidth="3" strokeLinecap="round">
+              <path d="M270 112 240 88 227 67M271 130 235 131 215 151M272 151 243 175 231 201M286 112 317 88 329 67M286 130 321 131 340 151M284 151 315 175 328 201" />
+              <path d="M269 94 260 77M283 94 293 77" />
+            </g>
+            <ellipse
+              cx="261"
+              cy="116"
+              rx="18"
+              ry="38"
+              transform="rotate(-24 261 116)"
+              fill="#f2edf9"
               stroke="#766395"
-              strokeWidth="1.5"
+              opacity=".8"
             />
-            <path
-              d="M148 80 213 115V193L148 158Z"
-              fill="#d3cbe6"
+            <ellipse
+              cx="295"
+              cy="116"
+              rx="18"
+              ry="38"
+              transform="rotate(24 295 116)"
+              fill="#f2edf9"
               stroke="#766395"
-              strokeWidth="1.5"
+              opacity=".8"
             />
-            <path
-              d="M213 115 278 80V158L213 193Z"
+            <ellipse
+              cx="278"
+              cy="148"
+              rx="14"
+              ry="35"
               fill="#b2a3ce"
               stroke="#766395"
-              strokeWidth="1.5"
             />
+            <ellipse cx="278" cy="116" rx="14" ry="21" fill="#766395" />
+            <circle cx="278" cy="95" r="12" fill="#433a57" />
             <path
-              d="M180 64 244 97V130L228 139V107L164 72"
-              fill="#eee9f5"
+              d="M32 223H106L114 207 122 233 130 217H184"
               stroke="#766395"
-              strokeWidth="1"
-            />
-            <path
-              d="M166 118V141M161 123 166 118 171 129M180 126V149M175 131 180 126 185 137"
-              stroke="#766395"
-              strokeWidth="2"
-            />
-            <path
-              d="M31 204H86L94 186 102 220 111 147 120 231 130 197H163L174 207H324"
-              stroke="#766395"
-              strokeWidth="2"
-            />
-            <path
-              d="M31 206V46M31 246H325"
-              stroke="#766395"
-              opacity=".2"
-              strokeDasharray="3 5"
+              opacity=".65"
             />
           </>
         )}
@@ -128,7 +149,7 @@ export default function ProjectVisual({
           ? "ORBITAL ELEMENTS / SGP4"
           : variant === "evolution"
             ? "SENSE / SELECT / EVOLVE"
-            : "SIMULATED TELEMETRY / DIGITAL TWIN"}
+            : "CONNECTOME / BRAIN / BODY"}
       </div>
       {variant === "orbital" && (
         <div className="visual-caption">
@@ -144,11 +165,11 @@ export default function ProjectVisual({
           <em>every restart.</em>
         </div>
       )}
-      {variant === "parcel" && (
+      {variant === "connectome" && (
         <div className="visual-caption">
-          Every impact
+          A brain. A body.
           <br />
-          <em>leaves a signal.</em>
+          <em>A world to explore.</em>
         </div>
       )}
     </div>

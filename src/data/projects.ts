@@ -6,6 +6,24 @@ export const categories = [
 export type Category = (typeof categories)[number];
 export const projects = [
   {
+    slug: "fuitfly2",
+    name: "Virtual Fly Lab",
+    category: "Interactive systems",
+    kind: "Connectome simulation & embodied neuroscience",
+    headline: "From neural spikes to a walking world.",
+    description:
+      "Couples a published fruit-fly connectome model to a NeuroMechFly body. Stimulate sensory neurons, watch activity become movement, and explore a second fly with an independent brain and physics world.",
+    steps: [
+      "Encode odor readings as sensory stimulation for a published Shiu/FlyWire spiking brain model running in Brian2.",
+      "Decode descending-neuron firing rates into walking and turning drives; advance MuJoCo body physics in fixed steps to close the sensory–motor loop.",
+      "Run a second brain in an isolated process with its own neural state and body. An engineered keyboard bridge adds sensory stimulation, while browser controls expose activity and preserve experiment logs.",
+    ],
+    detail:
+      "A research prototype using engineered sensory and motor mappings. Neural activity views are schematic; simulation runs slower than real time. Nested full-scale behavior still awaits validation, and learned computer use is not implemented.",
+    stack: ["Python", "Brian2", "MuJoCo"],
+    visual: "connectome",
+  },
+  {
     slug: "VaanThuli",
     name: "VaanThuli",
     category: "Interactive systems",
@@ -40,23 +58,5 @@ export const projects = [
       "Uses neuroevolution rather than a pretrained model or an LLM API. Performance emerges from candidate evaluation and depends on the training run; no guaranteed score is claimed.",
     stack: ["JavaScript", "Neural networks", "Genetic algorithms"],
     visual: "evolution",
-  },
-  {
-    slug: "Emd",
-    name: "Emd",
-    category: "Interactive systems",
-    kind: "Physics simulation & streaming analytics",
-    headline: "Give a parcel’s journey a digital twin.",
-    description:
-      "A software digital twin that simulates a parcel’s drops, flips, and heat exposure, then turns its sensor stream into a 3D view, damage-risk breakdown, and incident timeline.",
-    steps: [
-      "Generate acceleration, rotation, temperature, and humidity samples as a parcel moves through simulated delivery stages, with injectable drops and handling events.",
-      "Detect free-fall and impact signatures, estimate drop height from fall duration, and accumulate inversion time and thermal exposure.",
-      "Stream telemetry through FastAPI WebSockets to a Three.js dashboard, and compare incident timing with delivery custody to produce an exportable audit report.",
-    ],
-    detail:
-      "A pure software simulation with heuristic risk scores and custody rules. It demonstrates the analysis pipeline; it does not certify real damage or establish legal liability.",
-    stack: ["Python", "FastAPI", "Three.js"],
-    visual: "parcel",
   },
 ] as const;

@@ -12,6 +12,22 @@ test("portfolio remains usable without third-party requests", async ({
     "Something useful.",
   );
   await expect(page.getByRole("article")).toHaveCount(3);
+  await expect(page.getByRole("article").getByRole("heading")).toHaveText([
+    /^Virtual Fly Lab/,
+    /^VaanThuli/,
+    /^EvoTheDino/,
+  ]);
+  await expect(
+    page.getByRole("link", { name: "Explore Virtual Fly Lab" }),
+  ).toHaveAttribute("href", "https://github.com/Logesh-vr/fuitfly2");
+  await page
+    .getByRole("article")
+    .first()
+    .getByText("How it works", { exact: true })
+    .click();
+  await expect(
+    page.getByText(/Encode odor readings as sensory stimulation/),
+  ).toBeVisible();
   await page.getByRole("button", { name: "Evolutionary AI" }).click();
   await expect(page.getByRole("article")).toHaveCount(1);
   await expect(page.getByRole("heading", { name: /EvoTheDino/ })).toBeVisible();
