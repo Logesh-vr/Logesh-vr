@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="./assets/profile/curiosity.png">
-  <img src="./assets/profile/curiosity.gif" alt="Logesh — A curiosity-driven teenager. Neural signals and an orbit in motion." width="1000">
+  <img src="./assets/profile/curiosity.gif" alt="I am Logesh Rajaraman. Neural signals and an orbit in motion." width="1000">
 </picture>
 
 <h1 align="center">Hey, I’m Logesh.</h1>
