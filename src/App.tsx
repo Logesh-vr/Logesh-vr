@@ -205,7 +205,12 @@ export default function App() {
                       ))}
                     </ul>
                     <details>
-                      <summary>Project notes</summary>
+                      <summary>How it works</summary>
+                      <ol className="project-steps">
+                        {project.steps.map((step) => (
+                          <li key={step}>{step}</li>
+                        ))}
+                      </ol>
                       <p>{project.detail}</p>
                     </details>
                     <a

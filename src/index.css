@@ -366,52 +366,24 @@ h1 > span {
   aspect-ratio: 1.35;
   overflow: hidden;
 }
-.map {
+.orbital {
   background: #d7e0ca;
+  color: #294a36;
 }
-.map-grid {
+.evolution {
+  background: #252b22;
+  color: #eff4e6;
+}
+.parcel {
+  background: #e3deef;
+  color: #433a57;
+}
+.domain-art {
   position: absolute;
-  inset: -50%;
-  transform: rotate(-30deg);
-  background-image:
-    linear-gradient(#ffffff70 8px, transparent 8px),
-    linear-gradient(90deg, #ffffff70 8px, transparent 8px);
-  background-size: 65px 65px;
-}
-.map-road {
-  position: absolute;
-  height: 18px;
-  width: 160%;
-  background: #b7c8a8;
-  border: 4px solid #edf2e6;
-  transform: rotate(-30deg);
-  left: -20%;
-  top: 50%;
-}
-.road-two {
-  transform: rotate(60deg);
-  top: 46%;
-}
-.map-pin {
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  border: 5px solid #294a36;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 9px #294a361c;
-}
-.pin-one {
-  left: 58%;
-  top: 41%;
-}
-.pin-two {
-  left: 29%;
-  top: 27%;
-}
-.pin-three {
-  left: 74%;
-  top: 66%;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  height: 65%;
 }
 .visual-label {
   position: absolute;
@@ -420,93 +392,29 @@ h1 > span {
   font-size: 8px;
   letter-spacing: 0.6px;
 }
-.map-caption {
+.visual-caption {
   position: absolute;
-  bottom: 20px;
+  bottom: 18px;
   left: 20px;
   font-size: 23px;
   line-height: 1.15;
-  letter-spacing: -0.8px;
+  letter-spacing: -0.7px;
 }
-.map-caption strong {
-  font-weight: 600;
-}
-.training {
-  background: #252b22;
-  color: #eff4e6;
-  padding: 20px;
-}
-.training-top {
-  font-size: 24px;
-  font-weight: 800;
-  letter-spacing: -2px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.training-top span {
-  font-family: monospace;
-  font-size: 8px;
-  font-weight: 400;
-  letter-spacing: 1px;
-  color: #c1c9b7;
-}
-.training-title {
-  font-size: 26px;
-  line-height: 1.1;
-  letter-spacing: -0.9px;
-  position: relative;
-  z-index: 1;
-  margin-top: 14px;
-}
-.training-title em {
+.visual-caption em {
   font-family: Georgia, serif;
+}
+.evolution .visual-caption em {
   color: var(--accent);
 }
-.bars {
-  position: absolute;
-  bottom: 42px;
-  right: 20px;
-  width: 52%;
-  height: 130px;
-  display: flex;
-  align-items: flex-end;
-  gap: 8px;
-  transform: skewY(-10deg);
+.project-steps {
+  padding-left: 18px;
+  margin: 14px 0 0;
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--muted);
 }
-.bars span {
-  flex: 1;
-  background: linear-gradient(#c6f36b, #6a9632);
-  border-radius: 3px 3px 0 0;
-}
-.training-bottom {
-  position: absolute;
-  bottom: 18px;
-  left: 20px;
-  right: 20px;
-  display: flex;
-  justify-content: space-between;
-  font-family: monospace;
-  font-size: 8px;
-  letter-spacing: 1px;
-}
-.gesture {
-  background: #e3deef;
-  color: #766395;
-}
-.hand {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-.gesture-caption {
-  position: absolute;
-  bottom: 18px;
-  left: 20px;
-  font-size: 20px;
-  color: #433a57;
-  letter-spacing: -0.5px;
+.project-steps li + li {
+  margin-top: 10px;
 }
 .project-body {
   padding: 24px;
@@ -782,9 +690,6 @@ summary {
   .art-core > span {
     font-size: 26px;
   }
-  .bars {
-    height: 100px;
-  }
 }
 @media (max-width: 800px) {
   .hero-top .edition {
@@ -979,17 +884,8 @@ summary {
   .project-body details p {
     font-size: 14px;
   }
-  .map-caption {
-    font-size: 28px;
-  }
-  .training-title {
-    font-size: 32px;
-  }
-  .bars {
-    height: 130px;
-  }
-  .gesture-caption {
-    font-size: 24px;
+  .visual-caption {
+    font-size: 23px;
   }
   .visual-label {
     font-size: 9px;

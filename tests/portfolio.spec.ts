@@ -12,14 +12,12 @@ test("portfolio remains usable without third-party requests", async ({
     "Something useful.",
   );
   await expect(page.getByRole("article")).toHaveCount(3);
-  await page.getByRole("button", { name: "Computer vision" }).click();
+  await page.getByRole("button", { name: "Evolutionary AI" }).click();
   await expect(page.getByRole("article")).toHaveCount(1);
+  await expect(page.getByRole("heading", { name: /EvoTheDino/ })).toBeVisible();
+  await page.getByText("How it works", { exact: true }).click();
   await expect(
-    page.getByRole("heading", { name: /SignSenseAI/ }),
-  ).toBeVisible();
-  await page.getByText("Project notes", { exact: true }).click();
-  await expect(
-    page.getByText(/rather than a complete sign-language translator/),
+    page.getByText(/six signals—including obstacle distance/),
   ).toBeVisible();
   await page.getByRole("button", { name: /All projects/ }).click();
   await expect(page.getByRole("article")).toHaveCount(3);

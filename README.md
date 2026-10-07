@@ -8,11 +8,11 @@ I’m a **B.Tech Computer Science student** exploring full-stack development, AI
 
 ### Selected work
 
-| Project                                                     | What I’m building                                                                                                 | Technologies                 |
-| :---------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------- | :--------------------------- |
-| **[hoWrk](https://github.com/Logesh-vr/hoWrk)**             | A hackathon-built civic incident platform with live maps and dashboards for citizens, guardians, and authorities. | React · TypeScript · FastAPI |
-| **[UB](https://github.com/Logesh-vr/UB)**                   | A gym tracker for personal records, weekly routines, training history, and lift-based leaderboards.               | React · FastAPI · PostgreSQL |
-| **[SignSenseAI](https://github.com/Logesh-vr/SignSenseAI)** | A webcam-based hand-gesture experiment using landmarks and finger-state logic to recognize common gestures.       | React · MediaPipe · OpenCV   |
+| Project                                                   | How it works                                                                                                                                                                    | Technologies                                      |
+| :-------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------------------------------------------------ |
+| **[VaanThuli](https://github.com/Logesh-vr/VaanThuli)**   | Turns satellite orbital elements into positions with SGP4, renders them on a 3D Earth, and filters ground tracks around a location-based sky bubble.                            | Three.js · SGP4 · Fastify                         |
+| **[EvoTheDino](https://github.com/Logesh-vr/EvoTheDino)** | Evolves neural-network brains for the Chromium Dino runner: sense obstacles, evaluate runs, preserve champions, and breed the next generation through crossover and mutation.   | JavaScript · Neural networks · Genetic algorithms |
+| **[Emd](https://github.com/Logesh-vr/Emd)**               | Simulates parcel drops, flips, and heat exposure; extracts free-fall and impact features; streams a 3D digital twin with risk breakdowns and a custody-aware incident timeline. | Python · FastAPI · Three.js                       |
 
 [Explore more repositories →](https://github.com/Logesh-vr?tab=repositories)
 
