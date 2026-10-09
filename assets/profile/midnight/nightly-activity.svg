@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="84" viewBox="0 0 800 56" role="img" aria-label="NIGHTLY ACTIVITY">
+<rect width="800" height="56" fill="#161B22"/>
+<rect y="55" width="800" height="1" fill="#30363D"/>
+<rect x="0" y="0" width="4" height="56" fill="#A3E635"/>
+<text x="22" y="36" fill="#E6EDF3" font-family="Consolas, monospace" font-size="29" letter-spacing="1">NIGHTLY ACTIVITY</text>
+<g fill="#466334"><rect x="715" y="23" width="11" height="11"/><rect x="719" y="15" width="4" height="5"/><rect x="710" y="17" width="4" height="5"/><rect x="728" y="17" width="4" height="5"/></g>
+<g fill="#A3E635"><rect x="751" y="23" width="11" height="11"/><rect x="755" y="15" width="4" height="5"/><rect x="746" y="17" width="4" height="5"/><rect x="764" y="17" width="4" height="5"/></g>
+</svg>

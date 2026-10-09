@@ -1,0 +1,110 @@
+name: Midnight profile activity
+
+on:
+  schedule:
+    # 22:00 UTC = 03:30 IST the following day. GitHub may delay scheduled jobs.
+    - cron: "0 22 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/profile-midnight.yml
+      - .github/profile-3d-settings.json
+  pull_request:
+    paths:
+      - .github/workflows/profile-midnight.yml
+      - .github/profile-3d-settings.json
+
+permissions:
+  contents: read
+
+concurrency:
+  group: midnight-profile-activity-${{ github.event.pull_request.number || 'main' }}
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.repository == 'Logesh-vr/Logesh-vr' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - name: Check out the latest profile
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          ref: main
+
+      - name: Generate the calendar and charts
+        uses: yoshi389111/github-profile-3d-contrib@9e3f937195cf840d364388973f73e3c4b3753586 # verified main, v0.9.3 package
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: Logesh-vr
+          MAX_REPOS: "1000"
+          SETTING_JSON: .github/profile-3d-settings.json
+
+      - name: Validate and commit the generated graphic
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import pathlib
+          import xml.etree.ElementTree as ET
+          target = pathlib.Path("profile-3d-contrib/midnight.svg")
+          assert target.is_file() and target.stat().st_size > 1000, "Missing or empty graphic"
+          root = ET.parse(target).getroot()
+          assert root.tag == "{http://www.w3.org/2000/svg}svg", "Invalid SVG root"
+          content = target.read_text()
+          assert "NaN" not in content and "Infinity" not in content, "Invalid chart coordinates"
+          assert "<script" not in content.lower() and "<foreignobject" not in content.lower(), "Unexpected active content"
+          PY
+          git add -- profile-3d-contrib/midnight.svg
+          if git diff --cached --quiet; then
+            echo "Activity graphic is unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Refresh midnight profile activity"
+          git push origin HEAD:main
+
+  preview:
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == 'Logesh-vr/Logesh-vr'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - name: Check out the proposed profile
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+
+      - name: Generate an authenticated preview
+        uses: yoshi389111/github-profile-3d-contrib@9e3f937195cf840d364388973f73e3c4b3753586 # verified main, v0.9.3 package
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: Logesh-vr
+          MAX_REPOS: "1000"
+          SETTING_JSON: .github/profile-3d-settings.json
+
+      - name: Validate the preview
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import pathlib
+          import xml.etree.ElementTree as ET
+          target = pathlib.Path("profile-3d-contrib/midnight.svg")
+          assert target.is_file() and target.stat().st_size > 1000, "Missing or empty graphic"
+          assert ET.parse(target).getroot().tag == "{http://www.w3.org/2000/svg}svg", "Invalid SVG root"
+          content = target.read_text()
+          assert "NaN" not in content and "Infinity" not in content, "Invalid chart coordinates"
+          assert "<script" not in content.lower() and "<foreignobject" not in content.lower(), "Unexpected active content"
+          PY
+
+      - name: Save the review graphic
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: midnight-activity-preview
+          path: profile-3d-contrib/midnight.svg
+          if-no-files-found: error
+          retention-days: 14
