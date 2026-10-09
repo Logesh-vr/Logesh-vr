@@ -1,0 +1,11 @@
+{
+  "type": "normal",
+  "fileName": "midnight.svg",
+  "backgroundColor": "#0D1117",
+  "foregroundColor": "#E6EDF3",
+  "strongColor": "#A3E635",
+  "weakColor": "#9DA7B3",
+  "radarColor": "#A3E635",
+  "contribColors": ["#21262D", "#234527", "#407D32", "#75AF35", "#A3E635"],
+  "growingAnimation": false
+}
