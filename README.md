@@ -30,14 +30,14 @@ I don’t want to spend these years only being a student. **Resistance training,
 
 <table width="100%">
   <tr>
-    <td align="center" width="33%"><a href="https://github.com/Logesh-vr"><img src="./assets/profile/midnight/icons/github.svg" width="32" height="32" alt=""><br>GitHub</a></td>
-    <td align="center" width="34%"><a href="https://www.linkedin.com/in/logesh-rajaraman-665798323/"><img src="./assets/profile/midnight/icons/linkedin.svg" width="32" height="32" alt=""><br>LinkedIn</a></td>
-    <td align="center" width="33%"><a href="https://leetcode.com/u/Logesh4545/"><img src="./assets/profile/midnight/icons/code.svg" width="32" height="32" alt=""><br>LeetCode</a></td>
+    <td align="center" width="280"><a href="https://github.com/Logesh-vr"><img src="./assets/profile/midnight/icons/github.svg" width="32" height="32" alt=""><br><sub>GitHub</sub></a></td>
+    <td align="center" width="280"><a href="https://www.linkedin.com/in/logesh-rajaraman-665798323/"><img src="./assets/profile/midnight/icons/linkedin.svg" width="32" height="32" alt=""><br><sub>LinkedIn</sub></a></td>
+    <td align="center" width="280"><a href="https://leetcode.com/u/Logesh4545/"><img src="./assets/profile/midnight/icons/code.svg" width="32" height="32" alt=""><br><sub>LeetCode</sub></a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://logeshvr.vercel.app/"><img src="./assets/profile/midnight/icons/globe.svg" width="32" height="32" alt=""><br>Portfolio</a></td>
+    <td align="center"><a href="https://logeshvr.vercel.app/"><img src="./assets/profile/midnight/icons/globe.svg" width="32" height="32" alt=""><br><sub>Portfolio</sub></a></td>
     <td align="center"><img src="./assets/profile/midnight/icons/cat.svg" width="36" height="36" alt=""></td>
-    <td align="center"><a href="mailto:logeshrv2006@gmail.com"><img src="./assets/profile/midnight/icons/mail.svg" width="32" height="32" alt=""><br>Email</a></td>
+    <td align="center"><a href="mailto:logeshrv2006@gmail.com"><img src="./assets/profile/midnight/icons/mail.svg" width="32" height="32" alt=""><br><sub>Email</sub></a></td>
   </tr>
 </table>
 
@@ -79,9 +79,9 @@ I built a neural network in JavaScript to choose actions in the Dino runner. Eac
 
 <table width="100%">
   <tr>
-    <td align="center" width="33%"><img src="./assets/profile/midnight/icons/react.svg" width="36" height="36" alt=""><br><sub>React</sub></td>
-    <td align="center" width="34%"><img src="./assets/profile/midnight/icons/typescript.svg" width="36" height="36" alt=""><br><sub>TypeScript</sub></td>
-    <td align="center" width="33%"><img src="./assets/profile/midnight/icons/javascript.svg" width="36" height="36" alt=""><br><sub>JavaScript</sub></td>
+    <td align="center" width="280"><img src="./assets/profile/midnight/icons/react.svg" width="36" height="36" alt=""><br><sub>React</sub></td>
+    <td align="center" width="280"><img src="./assets/profile/midnight/icons/typescript.svg" width="36" height="36" alt=""><br><sub>TypeScript</sub></td>
+    <td align="center" width="280"><img src="./assets/profile/midnight/icons/javascript.svg" width="36" height="36" alt=""><br><sub>JavaScript</sub></td>
   </tr>
   <tr>
     <td align="center"><img src="./assets/profile/midnight/icons/flutter.svg" width="36" height="36" alt=""><br><sub>Flutter</sub></td>
@@ -94,9 +94,9 @@ I built a neural network in JavaScript to choose actions in the Dino runner. Eac
 
 <table width="100%">
   <tr>
-    <td align="center" width="33%"><img src="./assets/profile/midnight/icons/python.svg" width="36" height="36" alt=""><br><sub>Python</sub></td>
-    <td align="center" width="34%"><img src="./assets/profile/midnight/icons/fastapi.svg" width="36" height="36" alt=""><br><sub>FastAPI</sub></td>
-    <td align="center" width="33%"><img src="./assets/profile/midnight/icons/nodejs.svg" width="36" height="36" alt=""><br><sub>Node.js</sub></td>
+    <td align="center" width="280"><img src="./assets/profile/midnight/icons/python.svg" width="36" height="36" alt=""><br><sub>Python</sub></td>
+    <td align="center" width="280"><img src="./assets/profile/midnight/icons/fastapi.svg" width="36" height="36" alt=""><br><sub>FastAPI</sub></td>
+    <td align="center" width="280"><img src="./assets/profile/midnight/icons/nodejs.svg" width="36" height="36" alt=""><br><sub>Node.js</sub></td>
   </tr>
   <tr>
     <td align="center"><img src="./assets/profile/midnight/icons/postgresql.svg" width="36" height="36" alt=""><br><sub>PostgreSQL</sub></td>
@@ -111,9 +111,9 @@ I built a neural network in JavaScript to choose actions in the Dino runner. Eac
 
 <table width="100%">
   <tr>
-    <td align="center" width="33%"><img src="./assets/profile/midnight/icons/opencv.svg" width="36" height="36" alt=""><br><sub>OpenCV</sub></td>
-    <td align="center" width="34%"><img src="./assets/profile/midnight/icons/numpy.svg" width="36" height="36" alt=""><br><sub>NumPy</sub></td>
-    <td align="center" width="33%"><img src="./assets/profile/midnight/icons/pandas.svg" width="36" height="36" alt=""><br><sub>Pandas</sub></td>
+    <td align="center" width="280"><img src="./assets/profile/midnight/icons/opencv.svg" width="36" height="36" alt=""><br><sub>OpenCV</sub></td>
+    <td align="center" width="280"><img src="./assets/profile/midnight/icons/numpy.svg" width="36" height="36" alt=""><br><sub>NumPy</sub></td>
+    <td align="center" width="280"><img src="./assets/profile/midnight/icons/pandas.svg" width="36" height="36" alt=""><br><sub>Pandas</sub></td>
   </tr>
   <tr>
     <td align="center"><img src="./assets/profile/midnight/icons/neural.svg" width="36" height="36" alt=""><br><sub>Simulation</sub></td>
