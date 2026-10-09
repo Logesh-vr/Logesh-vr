@@ -86,7 +86,7 @@ I built a neural network in JavaScript to choose actions in the Dino runner. Eac
   <tr>
     <td align="center"><img src="./assets/profile/midnight/icons/flutter.svg" width="36" height="36" alt=""><br><sub>Flutter</sub></td>
     <td align="center"><img src="./assets/profile/midnight/icons/threejs.svg" width="36" height="36" alt=""><br><sub>Three.js</sub></td>
-    <td align="center"><img src="./assets/profile/midnight/icons/cat.svg" width="36" height="36" alt=""></td>
+    <td align="center"><img src="./assets/profile/midnight/icons/css.svg" width="36" height="36" alt=""><br><sub>CSS</sub></td>
   </tr>
 </table>
 
@@ -101,11 +101,9 @@ I built a neural network in JavaScript to choose actions in the Dino runner. Eac
   <tr>
     <td align="center"><img src="./assets/profile/midnight/icons/postgresql.svg" width="36" height="36" alt=""><br><sub>PostgreSQL</sub></td>
     <td align="center"><img src="./assets/profile/midnight/icons/git.svg" width="36" height="36" alt=""><br><sub>Git</sub></td>
-    <td align="center"><img src="./assets/profile/midnight/icons/cat.svg" width="36" height="36" alt=""></td>
+    <td align="center"><img src="./assets/profile/midnight/icons/sql.svg" width="36" height="36" alt=""><br><sub>SQL</sub></td>
   </tr>
 </table>
-
-<sub>Also: SQL</sub>
 
 #### Exploring intelligence
 
@@ -116,13 +114,11 @@ I built a neural network in JavaScript to choose actions in the Dino runner. Eac
     <td align="center" width="280"><img src="./assets/profile/midnight/icons/pandas.svg" width="36" height="36" alt=""><br><sub>Pandas</sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="./assets/profile/midnight/icons/neural.svg" width="36" height="36" alt=""><br><sub>Simulation</sub></td>
-    <td align="center"><img src="./assets/profile/midnight/icons/cat.svg" width="36" height="36" alt=""></td>
-    <td align="center"><sub>Neural networks<br>MediaPipe</sub></td>
+    <td align="center"><img src="./assets/profile/midnight/icons/simulation.svg" width="36" height="36" alt=""><br><sub>Simulation</sub></td>
+    <td align="center"><img src="./assets/profile/midnight/icons/neural.svg" width="36" height="36" alt=""><br><sub>Neural networks</sub></td>
+    <td align="center"><img src="./assets/profile/midnight/icons/mediapipe.svg" width="36" height="36" alt=""><br><sub>MediaPipe</sub></td>
   </tr>
 </table>
-
-<sub>Also: neural networks · MediaPipe</sub>
 
 <p align="center"><img src="./assets/profile/midnight/footer.png" alt="A black pixel cat curled up asleep under two tiny stars." width="440"></p>
 <p align="center"><samp>Got something interesting to share? Say hi.</samp><br><br>
