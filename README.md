@@ -5,12 +5,12 @@
   <img src="./assets/profile/midnight/banner.gif" alt="LOGESH. A black pixel cat with green eyes sits on a moonlit rooftop." width="1200">
 </picture>
 
-<p align="center"><strong>Curiosity-driven builder · B.Tech Computer Science</strong><br>
+<p align="center"><strong>Builder · B.Tech Computer Science</strong><br>
 <samp>If something interests me, I go deep.</samp></p>
 
 <h3><img src="./assets/profile/midnight/who-i-am.svg" alt="Who I Am" width="1200"></h3>
 
-I’m **Logesh**, a curiosity-driven teenager and a B.Tech Computer Science student. When I find something interesting, I want to go deep and understand it. I’m always ready to challenge myself and my limits.
+I’m **Logesh**, a B.Tech Computer Science student and an **intellectual omnivore**. I follow ideas across software, AI, and whatever else catches my attention. When something pulls me in, I want to understand how it works and see what I can build with it.
 
 <h3><img src="./assets/profile/midnight/what-i-do.svg" alt="What I Do" width="1200"></h3>
 
